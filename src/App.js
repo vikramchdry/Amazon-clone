@@ -27,7 +27,6 @@ function App() {
           <Route path = "/checkout">
             <Header/>
             <Checkout/>
-            <h1>Hello Basket how are you !</h1>
           </Route>
           {/* ----------This link for Orders ---------------------*/}
 
@@ -48,7 +47,7 @@ function App() {
          {/* ----------Default pages of the Website---------------------*/}
           <Route path = "/">
             <Header/>
-            <h1>Home Page!!!!!!!!!!!!!</h1>
+            <h1>Welcome to Vikram Singh!!!</h1>
           </Route>
 
         </Switch>

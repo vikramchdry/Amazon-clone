@@ -7,8 +7,9 @@ import React from "react";
 
 import Header from './Header';
 import Login from './Login';
+import Checkout from './Checkout';
 //import Home from './Home';
-//import Orders from './Orders';
+import Orders from './Orders';
 
 
 function App() {
@@ -25,13 +26,14 @@ function App() {
         {/* ----------This link for checkout Product ---------------------*/}
           <Route path = "/checkout">
             <Header/>
+            <Checkout/>
             <h1>Hello Basket how are you !</h1>
           </Route>
           {/* ----------This link for Orders ---------------------*/}
 
           <Route path = "/orders">
             <Header/>
-            <h1>Welcome Order !</h1>
+            <Orders/>
           </Route>
            {/* ----------This link for Payments---------------------*/}
           <Route path = "/payment">

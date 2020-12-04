@@ -1,15 +1,17 @@
 import React from "react";
+import './script/Orders.css';
 
 
 
-function Order() {
+function Orders(){
   
-  return (
-      <div className = "app">
-        <h1>Hello World !</h1>
-      </div>
+  return(
+    <div className='orders'>
+            <h1>Your Orders</h1>
+    </div>
+  )
   
-  );
 }
 
-export default Order;
+
+export default Orders;

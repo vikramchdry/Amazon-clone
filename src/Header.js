@@ -1,8 +1,12 @@
 
 import React from "react";
 import SearchIcon from  '@material-ui/icons/Search';
-import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+//import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+//import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import { Link } from "react-router-dom";
+
+import { ShoppingCart } from "@material-ui/icons";
 
 
 
@@ -64,8 +68,9 @@ function Header() {
 
             <Link to="/checkout">
                 <div className="header__optionBasket">
-                <ShoppingBasketIcon />
-                <span className="header__optionLineTwo header__basketCount">Basket</span>
+                
+                <span><AddShoppingCartIcon  /></span>
+                <span className="header__optionLineTwo header__basketCount">Cart</span>
                 </div>
             </Link>
         </div>

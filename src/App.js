@@ -8,8 +8,9 @@ import React from "react";
 import Header from './Header';
 import Login from './Login';
 import Checkout from './Checkout';
-//import Home from './Home';
+import Home from './Home';
 import Orders from './Orders';
+
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Route path = "/orders">
             <Header/>
             <Orders/>
+            <h1>Welcome Sonu!</h1>
           </Route>
            {/* ----------This link for Payments---------------------*/}
           <Route path = "/payment">
@@ -47,8 +49,10 @@ function App() {
          {/* ----------Default pages of the Website---------------------*/}
           <Route path = "/">
             <Header/>
-            <h1>Welcome to Vikram Singh!!!</h1>
+            <Home/>
+            
           </Route>
+       
 
         </Switch>
       </div>

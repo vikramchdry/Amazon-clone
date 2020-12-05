@@ -6,7 +6,7 @@ import SearchIcon from  '@material-ui/icons/Search';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import { Link } from "react-router-dom";
 
-import { ShoppingCart } from "@material-ui/icons";
+//import { ShoppingCart } from "@material-ui/icons";
 
 
 
@@ -69,7 +69,7 @@ function Header() {
             <Link to="/checkout">
                 <div className="header__optionBasket">
                 
-                <span><AddShoppingCartIcon  /></span>
+                <AddShoppingCartIcon  />
                 <span className="header__optionLineTwo header__basketCount">Cart</span>
                 </div>
             </Link>

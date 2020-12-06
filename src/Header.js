@@ -1,10 +1,14 @@
 
 import React from "react";
+import "./script/Header.css"
 import SearchIcon from  '@material-ui/icons/Search';
-//import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 //import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+//import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import { Link } from "react-router-dom";
+//import {ShoppingBasket } from "@material-ui/icons";
+import { useStateValue} from "./StateProvider";
+//import { ShoppingBasket } from "@material-ui/icons";
 
 //import { ShoppingCart } from "@material-ui/icons";
 
@@ -16,6 +20,9 @@ import { Link } from "react-router-dom";
 
 
 function Header() {
+
+    const [{ basket }] = useStateValue();
+    console.log(basket);
 
     return (
         
@@ -69,13 +76,15 @@ function Header() {
             <Link to="/checkout">
                 <div className="header__optionBasket">
                 
-                <AddShoppingCartIcon  />
-                <span className="header__optionLineTwo header__basketCount">Cart</span>
+                    <ShoppingBasketIcon />
+                    <span className="header__optionLineTwo header__basketCount">
+                        {basket?.length}
+                    </span>
                 </div>
             </Link>
         </div>
     </div>
-    );
-}
+        );
+    }
   
 export default Header;

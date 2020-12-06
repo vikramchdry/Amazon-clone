@@ -9,9 +9,13 @@ export  const StateContext = createContext();
 
 // Build the Provider because once we create data layer . Provider is kind of middleman to send that to different component
 
-export const StateProvider = ({reducer, intialState,children}) => (
-    <StateContext.Provider value = {useReducer(reducer,intialState)}>
-        {children}
+export const StateProvider = ({ reducer, initialState, children }) => (
+    <StateContext.Provider value={useReducer(reducer, initialState)}>
+      {children}
     </StateContext.Provider>
-)
+  );
+
+// This is how we use it inside of a component
+
+export const useStateValue = () => useContext(StateContext);
 

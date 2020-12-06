@@ -10,9 +10,9 @@ import { Link } from "react-router-dom";
 
 
 
-{/* Logo on the left*/}
+//{/* Logo on the left*/}
 
-{/* Search Box*/}
+//{/* Search Box*/}
 
 
 function Header() {

@@ -1,7 +1,7 @@
 
 export const initialState = {
 
-    basket: []
+    basket: [],
 };
 // data in basket we call it state and everything we do like add to cart it call it action 💇 
 

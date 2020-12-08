@@ -1,7 +1,7 @@
 
 export const initialState = {
 
-    basket: [],
+    basket: []
 };
 // data in basket we call it state and everything we do like add to cart it call it action 💇 
 
@@ -15,11 +15,31 @@ const reducer = (state, action) => {
                 ...state,
                 basket: [...state.basket, action.item]
             };
-            break;
         case 'REMOVE_FROM_BASKET':
             // Logic for Removing item from the basket 
-            return state;
-            break;
+            //we cloned the basket .⚾ 
+
+            let newBasket = [...state.basket];
+
+            //we check to see if product exists, or not
+            const index = state.basket.findIndex((basketItem) =>
+                basketItem.id === action.id);
+
+            if (index >= 0) {
+                //item exist in basket , remove .🙂 
+                newBasket.splice(index, 1);
+
+            } else {
+                console.warn(
+                    `Cant remove product (id: ${action.id}) as its not in basket!`
+                )
+            }
+            return {
+                ...state,
+                basket: newBasket,
+            };
+
+            return { ...state };
         default:
             return state;
     }

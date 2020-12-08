@@ -23,7 +23,6 @@ function Header() {
 
     const [{ basket }] = useStateValue();
     console.log(basket);
-
     return (
         
         <div className = "header">
@@ -77,9 +76,7 @@ function Header() {
                 <div className="header__optionBasket">
                 
                     <ShoppingBasketIcon />
-                    <span className="header__optionLineTwo header__basketCount">
-                        {basket?.length}
-                    </span>
+                        <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
                 </div>
             </Link>
         </div>

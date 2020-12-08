@@ -5,6 +5,9 @@ export const initialState = {
 };
 // data in basket we call it state and everything we do like add to cart it call it action 💇 
 
+export const getBasketTotal = (basket) =>
+    basket?.reduce((amount, item) => item.price + amount, 0);
+
 const reducer = (state, action) => {
     console.log(action);
 

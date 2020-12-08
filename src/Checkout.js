@@ -2,6 +2,8 @@ import React from 'react'
 import './script/Checkout.css';
 import { useStateValue } from './StateProvider';
 import CheckoutProduct from './CheckoutProduct.js';
+import "./script/Subtotal.css";
+import Subtotal from "./Subtotal.js";
 
 function Checkout() {
 
@@ -31,7 +33,7 @@ function Checkout() {
               {basket?.map(item => (
 
             <CheckoutProduct
-                  id={item.id}
+              id={item.id}
               title={item.title}
               image={item.image}
               price={item.price}
@@ -41,13 +43,18 @@ function Checkout() {
 
             </div>
           )}
-
-       
       </div>
+      {basket.length > 0 && (
+        <div className="checkout__right">
+          <h1>SubTotal</h1>
+          <Subtotal />
+          {/* Subtotal */}
+        </div>
 
-      <div className="checkout__right">
-        <h3>subtotal</h3>
-      </div>
+      )}
+
+
+
     </div>
   );
 }
